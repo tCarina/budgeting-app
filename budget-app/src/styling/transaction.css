@@ -1,0 +1,40 @@
+table {
+  display: flex;
+  width: 80%; 
+  border: 1px black solid;
+  padding: 0.5%;
+  justify-content: center;
+  flex-direction: row;
+  font-family: ArimaMed;
+  background-color: #e9c7ff;
+}
+
+tbody {
+  color: white;
+  font-size: 150%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+tr {
+  display: flex;
+  width: 15%;
+}
+
+.singleTrans {
+  display: flex;
+  padding: 0.5%;
+  justify-content: center;
+}
+
+table:hover {
+    background-color: #7f678f;
+}
+
+a {
+ width: inherit;
+  color: white;
+  font-family: AmiraMed;
+  text-decoration: none;
+}

@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
+import '../styling/navBar.css'
+
 
 const NavBar = () => {
     return (
+        <div className='navContainer'>
         <nav>
-            <h3>Budgeting App</h3>
-            <Link to='/transactions'>Transactions</Link>
-            <Link to='/transactions/new'>New Transaction</Link>
+            <p>Budget App</p>
+            <button className='newButton'><Link to='/transactions/new' className='newTransLink'>New Transaction</Link></button>
         </nav>
+        </div>
     )
 }
 

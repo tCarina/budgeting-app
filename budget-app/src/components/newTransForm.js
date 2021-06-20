@@ -21,6 +21,7 @@ const NewTransForm = ({ addTrans, history }) => {
 
   return (
     <section className="form" onSubmit={handleSubmit}>
+      <h1>Add A New Item</h1>
       <form>
         <label htmlFor="name">Name: </label>
         <input
@@ -31,7 +32,7 @@ const NewTransForm = ({ addTrans, history }) => {
         />
 
         <label htmlFor="date">Date: </label>
-        <input type='date'
+        <input type='date' placeholder='mm-dd-yyy'
         id='date' value={transaction.date} required 
         onChange={handleTextChange} 
         />

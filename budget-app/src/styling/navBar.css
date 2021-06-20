@@ -1,0 +1,63 @@
+nav {
+  width: 90%;
+  margin: 1%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background: rgb(255, 196, 247);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 196, 247, 1) 8%,
+    rgba(217, 159, 249, 1) 48%,
+    rgba(122, 209, 250, 1) 94%
+  );
+}
+
+@font-face {
+    font-family: ArimaMed;
+    src: url('../styling/fonts/ArimaMadurai-Medium.ttf');
+}
+@font-face {
+    src: url('../styling/fonts/LobsterTwo-Bold.ttf');
+    font-family: LobsterTwoBold;
+}
+
+p {
+  font-size: 500%;
+  font-weight: bold;
+  color: white;
+  font-family: LobsterTwoBold;
+  margin: inherit;
+}
+
+.navContainer {
+  padding: 0.5%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.newButton {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin:0 0.1em 0.1em 0;
+  border: 0.16em solid rgba(255, 255, 255, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  background-color: #fcb1ea;
+  text-align: center;
+  transition: all 0.2s;
+  font-size: large;
+  font-weight: bolder ;
+  font-family: ArimaaMed;
+}
+.newButton:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.newTransLink {
+    text-decoration: none;
+    color: white;
+}

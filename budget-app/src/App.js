@@ -37,23 +37,20 @@ function App() {
     fetchTrans();
   }, []);
 
-
-
   const addTotal = async () => {
     try {
-      const res = await axios.get(`${API}/transactions`)  
-      let sum = 0
-      res.data.forEach(trans =>{
-      return sum += Number(trans.amount)
-      })  
-      setTotal(sum)
-      console.log(total);
-      } catch (err){
-        console.log(err);
+      const res = await axios.get(`${API}/transactions`);
+      let sum = 0;
+      res.data.forEach((trans) => {
+        return (sum += Number(trans.amount));
+      });
+      setTotal(sum);
+    } catch (err) {
+      console.log(err);
     }
   };
 
-addTotal()
+  addTotal();
 
   return (
     <div className="App">

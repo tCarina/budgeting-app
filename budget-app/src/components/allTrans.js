@@ -1,15 +1,17 @@
-import Transaction from './transaction';
+import Transaction from "./transaction";
+import '../styling/allTrans.css'
 
-const Transactions = ({ transactions, ID, total }) => {
+const Transactions = ({ transactions, total }) => {
+  return (
+    <div className="allTrans">
+   
+          {transactions.map((transaction, ID) => {
+            return <Transaction key={ID} transaction={transaction} ID={ID} />;
+          })}
+      <p className='total'>Total: {total} </p>
+     
+    </div>
+  );
+};
 
-    return (
-        <section className='allTrans'>
-       {transactions.map((transaction, ID) => {
-           return <Transaction key={ID} transaction={transaction} ID={ID} />
-       })}
-       <h4>Total: {total} </h4>
-        </section>
-    )
-}
-
-export default Transactions; 
+export default Transactions;
