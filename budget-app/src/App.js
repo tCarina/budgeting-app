@@ -13,11 +13,12 @@ const API = apiURL();
 
 function App() {
   const [transactions, setTransactions] = useState([]);
+  const [total, setTotal] = useState(0);
 
   const addTrans = async (newTrans) => {
     try {
-      let res = await axios.post(`${API}/transactions`, newTrans)
-      setTransactions(prevTrans => [...prevTrans, res.data])
+      let res = await axios.post(`${API}/transactions`, newTrans);
+      setTransactions((prevTrans) => [...prevTrans, res.data]);
     } catch (err) {
       console.log(err);
     }
@@ -36,6 +37,24 @@ function App() {
     fetchTrans();
   }, []);
 
+
+
+  const addTotal = async () => {
+    try {
+      const res = await axios.get(`${API}/transactions`)  
+      let sum = 0
+      res.data.forEach(trans =>{
+      return sum += Number(trans.amount)
+      })  
+      setTotal(sum)
+      console.log(total);
+      } catch (err){
+        console.log(err);
+    }
+  };
+
+addTotal()
+
   return (
     <div className="App">
       <Router>
@@ -52,13 +71,12 @@ function App() {
             </Route>
 
             <Route exact path="/transactions">
-              <Transactions transactions={transactions} />
+              <Transactions transactions={transactions} total={total} />
             </Route>
 
             <Route path="/transactions/:ID">
               <TransDetails />
             </Route>
-
           </Switch>
         </main>
       </Router>
