@@ -25,11 +25,13 @@ useEffect(() => {
 }, [])
 
 return(
-    <section className='TransDetails'>
+    <section className='detailContainer'>
+        <div className='TransDetails'>
         <h3>{transaction.name}</h3>
         <h5>Date: {transaction.date}</h5>
         <h5>Amount: {transaction.amount}</h5>
         <h5>From: {transaction.from}</h5>
+        </div>
     </section>
 )
 

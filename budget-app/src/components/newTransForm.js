@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { withRouter } from "react-router-dom";
+import "../styling/newForm.css";
 
 const NewTransForm = ({ addTrans, history }) => {
   const [transaction, setTransaction] = useState({
@@ -16,41 +17,53 @@ const NewTransForm = ({ addTrans, history }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     addTrans(transaction);
-    history.push('/transactions')
+    history.push("/transactions");
   };
 
   return (
-    <section className="form" onSubmit={handleSubmit}>
+    <section className="formContainer">
       <h1>Add A New Item</h1>
-      <form>
-        <label htmlFor="name">Name: </label>
-        <input
-          id="name"
-          value={transaction.name}
-          required
-          onChange={handleTextChange}
-        />
+      <section className="form" onSubmit={handleSubmit}>
+        <form>
+          <label htmlFor="name">Name: </label>
+          <input
+            id="name"
+            value={transaction.name}
+            required
+            onChange={handleTextChange}
+          />
 
-        <label htmlFor="date">Date: </label>
-        <input type='date' placeholder='mm-dd-yyy'
-        id='date' value={transaction.date} required 
-        onChange={handleTextChange} 
-        />
+          <label htmlFor="date">Date: </label>
+          <input
+            type="date"
+            placeholder="mm-dd-yyy"
+            id="date"
+            value={transaction.date}
+            required
+            onChange={handleTextChange}
+          />
 
-        <label htmlFor="amount">Amount: </label>
-        <input
-          id="amount"
-          value={transaction.amount}
-          onChange={handleTextChange}
-        />
+          <label htmlFor="amount">Amount: </label>
+          <input
+            id="amount"
+            value={transaction.amount}
+            onChange={handleTextChange}
+          />
 
-        <label htmlFor="from" id="from">
-          From:{" "}
-        </label>
-        <input id="from" value={transaction.from} required onChange={handleTextChange} />
-
-        <input type="submit" />
-      </form>
+          <label htmlFor="from" id="from">
+            From:{" "}
+          </label>
+          <input
+            id="from"
+            value={transaction.from}
+            required
+            onChange={handleTextChange}
+          />
+          <div className='buttonContainer'>
+          <button type="submit">Submit</button>
+          </div>
+        </form>
+      </section>
     </section>
   );
 };

@@ -3,7 +3,7 @@ import "../styling/transaction.css";
 
 const Transaction = ({ transaction, ID }) => {
   return (
-    <div>
+    <div className='transContainer'>
       <section className="singleTrans">
     <table>
       <Link to={`/transactions/${ID}`}>

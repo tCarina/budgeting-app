@@ -7,7 +7,7 @@ const NavBar = () => {
         <div className='navContainer'>
         <nav>
             <p>Budget App</p>
-            <button className='newButton'><Link to='/transactions/new' className='newTransLink'>New Transaction</Link></button>
+            <button><Link to='/transactions/new' className='newTransLink'>New Transaction</Link></button>
         </nav>
         </div>
     )
