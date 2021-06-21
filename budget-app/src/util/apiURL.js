@@ -5,5 +5,5 @@ export const apiURL = () => {
         {
             return 'http://localhost:5005'
         }
-        return null; 
+        return 'https://pure-earth-58108.herokuapp.com/'; 
 }
