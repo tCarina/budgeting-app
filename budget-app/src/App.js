@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import '../src/App.css'
 
 import NavBar from "./components/navBar";
 import Home from "./components/home";
@@ -53,6 +54,7 @@ function App() {
   addTotal();
 
   return (
+      <view style={{flex:1}}>
     <div className="App">
       <Router>
         <NavBar />
@@ -78,6 +80,7 @@ function App() {
         </main>
       </Router>
     </div>
+    </view>
   );
 }
 

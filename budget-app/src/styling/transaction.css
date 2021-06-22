@@ -2,10 +2,7 @@ table {
   display: flex;
   width: 80%; 
   border: 1px black solid;
-  padding: 0.5%;
   justify-content: center;
-  flex-direction: row;
-  font-family: ArimaMed;
   background-color: #e9c7ff;
 }
 
@@ -14,12 +11,15 @@ tbody {
   font-size: 180%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  font-family: ArimaMad;
+  text-align: center;
 }
 
-tr {
+td {
   display: flex;
-  width: 15%;
+  align-self: center;
 }
 
 .singleTrans {

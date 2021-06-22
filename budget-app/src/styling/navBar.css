@@ -1,5 +1,5 @@
 nav {
-  width: 90%;
+  width: 87%;
   margin: 1%;
   display: flex;
   justify-content: space-around;
@@ -15,7 +15,7 @@ nav {
 }
 
 @font-face {
-    font-family: ArimaMed;
+    font-family: ArimaMad;
     src: url('../styling/fonts/ArimaMadurai-ExtraBold.ttf');
 }
 @font-face {
@@ -24,8 +24,7 @@ nav {
 }
 
 p {
-  font-size: 500%;
-  font-weight: bold;
+  font-size: 450%;
   color: white;
   font-family: LobsterTwoBold;
   margin: inherit;
@@ -36,27 +35,33 @@ p {
   width: 100%;
   justify-content: center;
 }
-button {
-  display: inline-block;
+.redirect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.3em 1.2em;
   margin:0 0.1em 0.1em 0;
   border: 0.16em solid rgba(255, 255, 255, 0);
-  border-radius: 2em;
+  font-family: ArimaMad;
+  border-radius: 29px;
   box-sizing: border-box;
   text-decoration: none;
-  font-weight: 300;
   background-color: #fcb1ea;
   text-align: center;
   transition: all 0.2s;
-  font-size: large;
-  font-weight: bolder ;
-  font-family: ArimaaMed;
+  font-size: 100%;
+  font-weight: bolder;
 }
-button:hover {
+.redirect:hover {
   border-color: rgba(255, 255, 255, 1);
 }
 
 .link {
     text-decoration: none;
     color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
 }

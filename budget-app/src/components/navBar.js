@@ -7,7 +7,10 @@ const NavBar = () => {
         <div className='navContainer'>
         <nav>
             <p>Budget App</p>
-            <button><Link to='/transactions/new' className='newTransLink'>New Transaction</Link></button>
+            <div className='buttons'>
+            <Link to='/transactions/new' className='redirect'>New Transaction</Link>
+            <Link to='/transactions' className='redirect'>All Transactions</Link>
+            </div>
         </nav>
         </div>
     )
