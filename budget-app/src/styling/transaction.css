@@ -33,8 +33,9 @@ table:hover {
 }
 
 a {
- width: inherit;
   color: white;
-  font-family: AmiraMed;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
+

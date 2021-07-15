@@ -60,7 +60,7 @@ const NewTransForm = ({ addTrans, history }) => {
             onChange={handleTextChange}
           />
           <div className='buttonContainer'>
-          <button type="submit">Submit</button>
+          <button type="submit" className='submitButton'>Submit</button>
           </div>
         </form>
       </section>

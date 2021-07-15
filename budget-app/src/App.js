@@ -8,6 +8,7 @@ import Home from "./components/home";
 import Transactions from "./components/allTrans";
 import TransDetails from "./components/transDetails";
 import NewTransForm from "./components/newTransForm";
+import EditTransaction from "./components/editTrans";
 
 import { apiURL } from "./util/apiURL";
 const API = apiURL();
@@ -51,7 +52,30 @@ function App() {
     }
   };
 
+  const deleteTrans = async (id) => {
+    try {
+      await axios.delete(`${API}/transactions/${id}`)
+      const newTrans = [...transactions]
+      newTrans.splice(id, 1)
+      setTransactions(newTrans)
+    }
+    catch(err) {
+      console.log(err);
+    }
+  }
+
   addTotal();
+
+  const updateTrans = async (updatedTrans, id) => {
+    try{
+        await axios.put(`${API}/transactions${id}`, updatedTrans)
+        const newTrans = [...transactions]
+        newTrans[id] = updatedTrans
+        setTransactions(newTrans)
+    } catch (err){
+        console.log(err);
+    }
+}
 
   return (
       <view style={{flex:1}}>
@@ -73,8 +97,12 @@ function App() {
               <Transactions transactions={transactions} total={total} />
             </Route>
 
-            <Route path="/transactions/:ID">
-              <TransDetails />
+            <Route exact path="/transactions/:id">
+              <TransDetails deleteTrans={deleteTrans} />
+            </Route>
+
+            <Route path ='/transactions/:id/edit'>
+              <EditTransaction updateTrans={updateTrans} />
             </Route>
           </Switch>
         </main>

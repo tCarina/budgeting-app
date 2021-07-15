@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import "../styling/transaction.css";
 
-const Transaction = ({ transaction, ID }) => {
+const Transaction = ({ transaction, id }) => {
   return (
     <div className='transContainer'>
       <section className="singleTrans">
     <table>
-      <Link to={`/transactions/${ID}`}>
+      <Link to={`/transactions/${id}`}>
           <tbody>
             <tr>
               <td>{transaction.date}</td>

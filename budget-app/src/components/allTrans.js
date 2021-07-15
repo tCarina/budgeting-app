@@ -6,8 +6,8 @@ const Transactions = ({ transactions, total }) => {
     <div className="allTrans">
       <p className='index'>Transaction Index</p>
       <p className='total'>Total: {total} </p>
-          {transactions.map((transaction, ID) => {
-            return <Transaction key={ID} transaction={transaction} ID={ID} />;
+          {transactions.map((transaction, id) => {
+            return <Transaction key={id} transaction={transaction} id={id} />;
           })}
      
     </div>
